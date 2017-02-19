@@ -1,0 +1,236 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Logistics</h2>
+<p>
+  <strong>Delivery Date:</strong>
+  <%= @order.deliveryDate %>
+</p>
+
+<p>
+  <strong>Pickup Date:</strong>
+  <%= @order.pickupDate %>
+</p>
+
+<p>
+  <strong>Days on site:</strong>
+  <%= @order.daysOnSite %>
+</p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @order.phrase %>
+</p>
+
+<p>
+  <strong>Delivery Address:</strong>
+  Street: <%= @order.deliveryStreet %>
+  City, Zip: <%= @order.deliveryCity %>, <%= @order.deliveryZip %>
+</p>
+
+
+<h2>Ornamet</h2>
+<table>
+  <tr>
+    <td>Candles</td>
+    <td><%= @order.ornamertCandles %></td>
+    <td>Hearts</td>
+    <td><%= @order.ornamertHearts %></td>
+  </tr>
+  <tr>
+    <td>Smilies</td>
+    <td><%= @order.ornamertSmileys %></td>
+    <td>Teddybears</td>
+    <td><%= @order.ornamertTeddybears %></td>
+  </tr>
+  <tr>
+    <td>Cows</td>
+    <td><%= @order.ornamertCows %></td>
+    <td>Dinos</td>
+    <td><%= @order.ornamertDinos %></td>
+  </tr>
+  <tr>
+    <td>Flamingos</td>
+    <td><%= @order.ornamertFlamingos %></td>
+    <td>Graduation Smilies</td>
+    <td><%= @order.ornamertGraduationSmileys %></td>
+  </tr>
+  <tr>
+    <td>Cap & Scroll</td>
+    <td><%= @order.ornamertCaps %></td>
+    <td>Stork</td>
+    <td><%= @order.ornamertStork %></td>
+  </tr>
+  <tr>
+    <td>Other</td>
+    <td><%= @order.ornamertOther %> <%= @order.ornamentOtherFillin %>
+    </td>
+  </tr>
+  <tr>
+    <td>TBD: <%= @order.ornamertTBD %></td>
+  </tr>
+
+</table>
+
+<p>
+  <strong>Source:</strong>
+  Prime: <%= @order.primeSource %> | Secondary: <%= @order.secondSource %>
+</p>
+
+
+<p>
+  <strong>Purpose - birthday:</strong>
+  <%= @order.purposeBirthday %>
+</p>
+
+<p>
+  <strong>Purpose - anniversary:</strong>
+  <%= @order.purposeAnniversary %>
+</p>
+
+<p>
+  <strong>Purpose - wedding:</strong>
+  <%= @order.purposeWedding %>
+</p>
+
+<p>
+  <strong>Purpose - holiday:</strong>
+  <%= @order.purposeHoliday %>
+</p>
+
+<p>
+  <strong>Purpose - baby:</strong>
+  <%= @order.purposeBaby %>
+</p>
+
+<p>
+  <strong>Purpose - graduation:</strong>
+  <%= @order.purposeGraduation %>
+</p>
+
+<p>
+  <strong>Purpos - eother:</strong>
+  <%= @order.purposeOther %>
+</p>
+
+<p>
+  <strong>Purpose - other fillin:</strong>
+  <%= @order.purposeOtherFillin %>
+</p>
+
+<p>
+  <strong>Bday age:</strong>
+  <%= @order.bdayAge %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @order.amount %>
+</p>
+
+<p>
+  <strong>Delivery person:</strong>
+  Prime: <%= @order.deliveryPrime %> | Secondary: <%= @order.deliverySecond %>
+</p>
+
+<p>
+  <strong>Pickup person:</strong>
+  prime: <%= @order.pickupPrime %> | Secondary: <%= @order.pickupSecond %>
+</p>
+
+<p>
+  <strong>Items missing:</strong>
+  <%= @order.itemsMissing %>
+</p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.orderDate %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @order.date %>
+</p>
+
+<p>
+  <strong>Orderzip:</strong>
+  <%= @order.orderZip %>
+</p>
+
+<p>
+  <strong>Gender receipient:</strong>
+  <%= @order.genderReceipient %>
+</p>
+
+<p>
+  <strong>Gender receipient:</strong>
+  <%= @order.genderReceipient %>
+</p>
+
+<p>
+  <strong>Gender orderer:</strong>
+  <%= @order.genderOrderer %>
+</p>
+
+<p>
+  <strong>Order relationship wife or girlfriend:</strong>
+  <%= @order.orderRelationshipWifeGirlfriend %>
+</p>
+
+<p>
+  <strong>Order relationship husband or boyfriend:</strong>
+  <%= @order.orderRelationshipHusbandBoyfriend %>
+</p>
+
+<p>
+  <strong>Order relationship mom:</strong>
+  <%= @order.orderRelationshipMom %>
+</p>
+
+<p>
+  <strong>Order relationship dad:</strong>
+  <%= @order.orderRelationshipDad %>
+</p>
+
+<p>
+  <strong>Order relationship son:</strong>
+  <%= @order.orderRelationshipSon %>
+</p>
+
+<p>
+  <strong>Order relationship daughter:</strong>
+  <%= @order.orderRelationshipDaughter %>
+</p>
+
+<p>
+  <strong>Order relationship sibling:</strong>
+  <%= @order.orderRelationshipSibling %>
+</p>
+
+<p>
+  <strong>Order relationship friend:</strong>
+  <%= @order.orderRelationshipFriend %>
+</p>
+
+<p>
+  <strong>Order relationship coworker:</strong>
+  <%= @order.orderRelationshipCoworker %>
+</p>
+
+<p>
+  <strong>Order relationship unknown:</strong>
+  <%= @order.orderRelationshipUnknown %>
+</p>
+
+<p>
+  <strong>Order relationship other:</strong>
+  <%= @order.orderRelationshipOther %> <%= @order.orderRelationshipOtherFillin %>
+</p>
+
+<p>
+  <strong>Leadtime:</strong>
+  <%= @order.leadtime %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,231 @@
+<%= form_for(order) do |f| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h2>Logistics</h2>
+  <div class="field">
+    Delivery Date:
+    <%= f.date_select :deliveryDate %>
+  </div>
+
+  <div class="field">
+    Pick-up Date:
+    <%= f.date_select :pickupDate %>
+  </div>
+
+<h3>Address</h3>
+  <div class="field">
+    Street: <%= f.text_field :deliveryStreet %><br />
+    City: <%= f.text_field :deliveryCity %>, CA<br />
+    Zip: <%= f.text_field :deliveryZip %>
+  </div>
+
+<h2>Phrase</h2>
+  <div class="field">
+    <%= f.text_area :phrase %>
+  </div>
+
+<h2>Ornament</h2>
+<table>
+  <tr>
+    <td><%= select_tag(:ornamertTBD, '<option value="1">TBD</option>') %></td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertTBD) %> <%= label_tag(:ornamertTBD, "TBD") %></td>
+    <td><%= check_box_tag(:ornamertCandles) %> Candles</td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertHearts) %> Hearts</td>
+    <td><%= check_box_tag(:ornamertSmileys) %> Smiles</td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertTeddybears) %> Teddybears</td>
+    <td><%= check_box_tag(:ornamertCows) %> Cows</td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertDinos) %> Dinos</td>
+    <td><%= check_box_tag(:ornamertFlamingos) %> Flamingos</td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertGraduationSmileys) %> Graduation Smiles</td>
+    <td><%= check_box_tag(:ornamertCaps) %> Cap & Scroll</td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag(:ornamertStork) %> Stork</td>
+    <td><%= check_box_tag(:ornamertOther) %> Other: <%= f.text_field :ornamentOtherFillin %></td>
+  </tr>
+
+</table>
+
+<h2>Source</h2>
+  <div class="field">
+    Prime: <%= f.text_area :primeSource %>
+    Secondary: <%= f.text_area :secondSource %>
+  </div>
+
+<h2>Purpose</h2>
+<table>
+  <tr>
+    <td><div class="field">
+      <%= check_box_tag(:purposeBirthday) %> Birthday
+    </div></td>
+    <td><div class="field">
+      <%= check_box_tag(:purposeAnniversary) %> Anniversary
+    </div></td>
+    <td><div class="field">
+      <%= check_box_tag(:purposeWedding) %> Wedding
+    </div></td>
+    <td><div class="field">
+    <%= check_box_tag(:purposeHoliday) %> Holiday
+    </div></td>
+  </tr>
+  <tr>
+    <td><div class="field">
+    <%= check_box_tag(:purposeBaby) %> Boby
+
+    </div></td>
+    <td><div class="field">
+    <%= check_box_tag(:purposeGraduation) %> Graduation
+
+    </div></td>
+    <td><div class="field">
+    <%= check_box_tag(:purposeOther) %> Other: <%= f.text_area :purposeOtherFillin %>
+    </div></td>
+  </tr>
+</table>
+
+  <div class="field">
+    <%= f.label :bdayAge %>
+    <%= f.text_field :bdayAge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <h2>Delivery</h2>
+  <div class="field">
+    Prime: <%= f.text_field :deliveryPrime %>
+    Secondary: <%= f.text_field :deliverySecond %>
+  </div>
+
+  <h2>Pickup</h2>
+  <div class="field">
+    Prime: <%= f.text_field :pickupPrime %>
+    Secondary: <%= f.text_field :pickupSecond %>
+  </div>
+
+  <div class="field">
+    <%= f.label :itemsMissing %>
+    <%= f.text_field :itemsMissing %>
+  </div>
+
+  <div class="field">
+    <%= f.label :orderDate %>
+    <%= f.text_field :orderDate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :orderZip %>
+    <%= f.text_field :orderZip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genderReceipient %>
+    <%= f.text_field :genderReceipient %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genderOrderer %>
+    <%= f.text_field :genderOrderer %>
+  </div>
+
+  <h2>Relationship of Orderer</h2>
+
+  <table>
+    <tr>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipWifeGirlfriend) %> Wife or Girlfriend
+        </div>
+        </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipHusbandBoyfriend) %> Husband or Boyfriend
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipMom) %> Mom
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipDad) %> Dad
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipSon) %> Son
+        </div>
+        </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipDaughter) %> Daughter
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipSibling) %> Sibling
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipFriend) %> Friend
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipCoworker) %> Co-worker
+        </div>
+        </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipUnknown) %> Unknown
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= check_box_tag(:orderRelationshipOther) %> Other: <%= f.text_field :orderRelationshipOtherFillin %>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+
+  <div class="field">
+    <%= f.label :leadtime %>
+    <%= f.text_field :leadtime %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

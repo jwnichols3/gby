@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Greeting Orders</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Delivery</th>
+      <th>Pickup</th>
+      <th>TBD</th>
+      <th>Candles</th>
+      <th>Hearts</th>
+      <th>Smileys</th>
+      <th>Teddys</th>
+      <th>Cows</th>
+      <th>Dinos</th>
+      <th>Flamingos</th>
+      <th>Grad Smileys</th>
+      <th>Cap</th>
+      <th>Stork</th>
+      <th>Other</th>
+      <th>Phrase</th>
+      <th>Address, City ZIP</th>
+      <th>Delivery person (prime)</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.deliveryDate %></td>
+        <td><%= order.pickupDate %></td>
+        <td><%= order.ornamertTBD %></td>
+        <td><%= order.ornamertCandles %></td>
+        <td><%= order.ornamertHearts %></td>
+        <td><%= order.ornamertSmileys %></td>
+        <td><%= order.ornamertTeddybears %></td>
+        <td><%= order.ornamertCows %></td>
+        <td><%= order.ornamertDinos %></td>
+        <td><%= order.ornamertFlamingos %></td>
+        <td><%= order.ornamertGraduationSmileys %></td>
+        <td><%= order.ornamertCaps %></td>
+        <td><%= order.ornamertStork %></td>
+        <td><%= order.ornamertOther %> <%= order.ornamentOtherFillin %></td>
+        <td><%= order.phrase %></td>
+        <td><%= order.deliveryStreet %>, <%= order.deliveryCity %> <%= order.deliveryZip %></td>
+        <td><%= order.deliveryPrime %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>
