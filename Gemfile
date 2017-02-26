@@ -13,6 +13,7 @@ gem 'rails', '~> 5.0.1'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+#gem 'unicorn', '~> 4.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -55,5 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
-gem "twilio-ruby"
+#gem "twilio-ruby"
+
+#gem "omniauth"
 
